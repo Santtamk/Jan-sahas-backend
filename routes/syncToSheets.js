@@ -46,7 +46,7 @@ async function syncToSheets() {
   await sheets.spreadsheets.values.append({
     spreadsheetId: process.env.SHEET_ID,
     range: "Sheet1!A1",
-    valueInputOption: "RAW",
+    valueInputOption: "USER_ENTERED",
     requestBody: {
       values: rows,
     },
